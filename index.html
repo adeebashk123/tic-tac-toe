@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            border: 3px solid #007bff; /* Default border color */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cell:hover {
+            background-color: #e9ecef;
+        }
+        .winner {
+            color: green;
+        }
+        .dark-mode .cell {
+            border-color: #ffc107; /* Border color for dark mode */
+        }
+        .dark-mode {
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Tic Tac Toe</h1>
+        <div id="status" class="mb-3"></div>
+        <button class="btn btn-secondary mb-3" id="toggleColorMode">Toggle Color Mode</button>
+        <div class="board" id="board"></div>
+        <button class="btn btn-primary mt-3" id="restart">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
